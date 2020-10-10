@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent {
+            width: 408px;
+            height: 50px;
+            font-size: 0;
+        }
+
+        #parent>div {
+            width: 100px;
+            height: 100%;
+            font-size: 12px;
+            border: 1px solid #999;
+            display: inline-block;
+        }
+
+        :nth-child(3) {
+            background-color: aquamarine;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div>1</div>
+        <div>2</div>
+        <div id="translateX">3</div>
+        <div>4</div>
+    </div>
+
+    <script>
+        const element = document.getElementById('translateX')
+        element.style.transform = 'translateX(-100%)'
+    </script>
+</body>
+</html>
